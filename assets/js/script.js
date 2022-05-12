@@ -17,13 +17,13 @@ for (let i = 0; i < textareaSections.length; i++) {
     $(textareaSections[i]).addClass("future");
   }
 
-  console.log($(textareaSections[i]).attr("id"));
+//   console.log($(textareaSections[i]).attr("id"));
 }
 // console.log(moment().hour())
 
 // save button functionality to save to local storage from
 saveBtn.on("click", function () {
-  var time = $(this).parent().attr("id");
+  var time = $(this).siblings(".description").attr("id");
   var userText = $(this).siblings(".description").val();
   localStorage.setItem(time, userText);
 });
