@@ -21,27 +21,22 @@ for (let i = 0; i < textareaSections.length; i++) {
 }
 // console.log(moment().hour())
 
-// save button functionality to save to local storage from 
+// save button functionality to save to local storage from
 saveBtn.on("click", function () {
   var time = $(this).parent().attr("id");
   var userText = $(this).siblings(".description").val();
   localStorage.setItem(time, userText);
 });
 
-var loadSaved = function () {
-  $("#9 .description").val(localStorage.getItem("9"));
-  $("#10 .description").val(localStorage.getItem("10"));
-  $("#11 .description").val(localStorage.getItem("11"));
-  $("#12 .description").val(localStorage.getItem("12"));
-  $("#13 .description").val(localStorage.getItem("13"));
-  $("#14 .description").val(localStorage.getItem("14"));
-  $("#15 .description").val(localStorage.getItem("15"));
-  $("#16 .description").val(localStorage.getItem("16"));
-  $("#17 .description").val(localStorage.getItem("17"));
+var memory = function () {
+    $("#9 .description").val(localStorage.getItem("9"));
+    $("#10 .description").val(localStorage.getItem("10"));
+    $("#11 .description").val(localStorage.getItem("11"));
+    $("#12 .description").val(localStorage.getItem("12"));
+    $("#13 .description").val(localStorage.getItem("13"));
+    $("#14 .description").val(localStorage.getItem("14"));
+    $("#15 .description").val(localStorage.getItem("15"));
+    $("#16 .description").val(localStorage.getItem("16"));
+    $("#17 .description").val(localStorage.getItem("17"));
 };
-var memory = function() {
-    $('.time-block').each(function() {
-        var timeBlock = 
-    })
-}
-loadSaved();
+memory();
